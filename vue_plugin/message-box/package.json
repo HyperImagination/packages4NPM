@@ -1,0 +1,27 @@
+{
+  "name": "vue-messagebox-plugin",
+  "version": "1.0.0",
+  "description": "a plugin whitch is a component named messagebox of Vue.js in fact.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HyperImagination/packages4NPM.git"
+  },
+  "keywords": [
+    "vue",
+    "plugin",
+    "messagebox"
+  ],
+  "author": "hyperimage",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HyperImagination/packages4NPM/issues"
+  },
+  "homepage": "https://github.com/HyperImagination/packages4NPM#readme"
+}
