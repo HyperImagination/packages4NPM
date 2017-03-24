@@ -1,0 +1,22 @@
+{
+  "name": "vue-messagebox-plugin",
+  "version": "1.0.0",
+  "description": "for packaging a vue component to release to NPM as a plugin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c"
+  },
+  "keywords": [
+    "vue",
+    "component",
+    "messagebox"
+  ],
+  "author": "hyperimage",
+  "license": "ISC",
+  "devDependencies": {
+    "rollup": "^0.41.4",
+    "rollup-plugin-css-only": "^0.2.0",
+    "rollup-plugin-vue2": "^0.8.0"
+  }
+}

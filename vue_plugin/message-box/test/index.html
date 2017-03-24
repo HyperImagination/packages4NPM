@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Document</title>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+  <script src="../dist/vue-messagebox-plugin.umd.js"></script>
+  <link rel="stylesheet" href="../dist/vue-messagebox-plugin.cjs.css">
+  <!--<script src="../dist2/vue-message-plugin.umd.js"></script>
+  <link rel="stylesheet" href="../dist2/vue-message-plugin.cjs.css">-->
+</head>
+
+<body>
+  <div id="app">
+    <button @click="alert">alert</button>
+    <button @click="confirm">confirm</button>
+    <button @click="alert3">alert3</button>
+  </div>
+
+  <script>
+    new Vue({
+      el: "#app",
+      methods: {
+        alert() {
+          this.$messagebox({
+            title: "提示啊",
+            message: "呵呵哒"
+          })
+            .then(() => {
+              console.log("点击了确认.");
+            });
+        },
+        confirm() {
+          this.$messagebox({
+            title: "确人马",
+            message: "呵dsadad呵哒",
+            showCancelButton: true,
+            cancelButtonText: "不要"
+          })
+            .then(() => {
+              console.log("点击了确认." + Date.now());
+            })
+            .catch((e) => {
+              console.log(e, "点击了取消" + Date.now());
+            });
+        },
+        alert3() {
+          for (let i = 0, j = 5; i < j; i++) {
+            setTimeout(() => {
+              this.$messagebox({
+                title: "确人马",
+                message: "呵dsadad呵哒" + i
+              })
+            }, 1000)
+          }
+        }
+      }
+    })
+    Vue.use(vueMessageboxPlugin);
+  </script>
+</body>
+
+</html>
